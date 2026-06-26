@@ -1,0 +1,42 @@
+{
+  "reportIssue": "तक्रार नोंदवा",
+  "selectCategory": "आपल्या समस्येसाठी योग्य विभाग निवडा.",
+  "continue": "पुढे जा",
+
+  "step1": "पायरी 1 / 3",
+  "step2": "पायरी 2 / 3",
+  "step3": "पायरी 3 / 3",
+
+  "issueDetails": "तक्रारीचा तपशील",
+  "issueDetailsDesc": "समस्येचे निराकरण करण्यासाठी तपशील द्या.",
+
+  "selectedCategory": "निवडलेला विभाग",
+
+  "describeIssue": "तक्रारीचे वर्णन करा",
+
+  "placeholder": "कृपया समस्येचे सविस्तर वर्णन करा...",
+
+  "voiceInput": "आवाजाद्वारे माहिती द्या",
+  "listening": "ऐकत आहे...",
+
+  "uploadPhoto": "फोटो अपलोड करा",
+
+  "back": "मागे",
+
+  "submit": "सादर करा",
+
+  "issueSubmitted": "तक्रार सादर झाली",
+
+  "complaintRegistered": "आपली तक्रार यशस्वीरित्या नोंदवली गेली आहे.",
+
+  "referenceId": "संदर्भ क्रमांक",
+
+  "reportAnother": "नवीन तक्रार नोंदवा",
+
+  "roadDamage": "रस्त्याचे नुकसान",
+  "waterSupply": "पाणी पुरवठा",
+  "garbageCollection": "कचरा संकलन",
+  "streetLight": "रस्त्यावरील दिवे",
+  "publicSafety": "सार्वजनिक सुरक्षा",
+  "other": "इतर"
+}

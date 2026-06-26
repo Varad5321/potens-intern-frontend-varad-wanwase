@@ -1,0 +1,42 @@
+{
+  "reportIssue": "Report an Issue",
+  "selectCategory": "Select the category that best describes your issue.",
+  "continue": "Continue",
+
+  "step1": "Step 1 of 3",
+  "step2": "Step 2 of 3",
+  "step3": "Step 3 of 3",
+
+  "issueDetails": "Issue Details",
+  "issueDetailsDesc": "Provide details to help us resolve the issue quickly.",
+
+  "selectedCategory": "Selected Category",
+
+  "describeIssue": "Describe the Issue",
+
+  "placeholder": "Please describe the issue in detail...",
+
+  "voiceInput": "Start Voice Input",
+  "listening": "Listening...",
+
+  "uploadPhoto": "Upload Photo",
+
+  "back": "Back",
+
+  "submit": "Submit",
+
+  "issueSubmitted": "Issue Submitted",
+
+  "complaintRegistered": "Your complaint has been successfully registered.",
+
+  "referenceId": "Reference ID",
+
+  "reportAnother": "Report Another Issue",
+
+  "roadDamage": "Road Damage",
+  "waterSupply": "Water Supply",
+  "garbageCollection": "Garbage Collection",
+  "streetLight": "Street Light",
+  "publicSafety": "Public Safety",
+  "other": "Other"
+}
