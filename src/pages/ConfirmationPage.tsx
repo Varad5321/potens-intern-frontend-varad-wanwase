@@ -1,84 +1,74 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { FaCheckCircle } from "react-icons/fa";
 import { useEffect } from "react";
-
 import { useTranslation } from "react-i18next";
 import LanguageToggle from "../components/LanguageToggle";
 
 const ConfirmationPage = () => {
   const location = useLocation();
   const navigate = useNavigate();
-
   const { t } = useTranslation();
 
-  const {
-    category,
-    description,
-    imageName,
-    referenceId,
-  } = location.state || {};
+  const { category, description, imageName, referenceId } = location.state || {};
 
   useEffect(() => {
     navigator.vibrate?.(100);
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-50 px-5 py-8 flex items-center">
-      <div className="max-w-sm mx-auto w-full">
-        <div className="flex justify-end mb-4">
+    <div className="flex min-h-screen items-center justify-center bg-[radial-gradient(circle_at_top_left,_rgba(59,130,246,0.16),_transparent_40%),linear-gradient(135deg,_#f7fbff_0%,_#eef5ff_100%)] px-4 py-6 sm:px-6 lg:px-8">
+      <div className="mx-auto w-full max-w-3xl">
+        <div className="mb-4 flex justify-end">
           <LanguageToggle />
         </div>
 
-        <div className="bg-white rounded-2xl shadow-sm p-8 text-center">
-          <FaCheckCircle
-            className="mx-auto text-green-500 mb-5"
-            size={70}
-          />
+        <div className="rounded-[28px] border border-slate-200/80 bg-white/90 p-6 text-center shadow-[0_20px_60px_rgba(15,23,42,0.08)] backdrop-blur sm:p-8">
+          <FaCheckCircle className="mx-auto mb-5 text-emerald-500" size={70} />
 
-          <p className="text-sm font-medium text-blue-600 mb-2">
+          <div className="mb-6 flex items-center justify-center gap-2 text-sm font-medium text-sky-700">
+            <span className="h-2.5 w-2.5 rounded-full bg-sky-500" />
             {t("step3")}
-          </p>
+          </div>
 
-          <h1 className="text-3xl font-bold text-gray-900">
+          <h1 className="text-3xl font-semibold text-slate-900 sm:text-4xl">
             {t("issueSubmitted")}
           </h1>
-
-          <p className="text-gray-500 mt-3">
+          <p className="mt-3 text-sm leading-6 text-slate-600 sm:text-base">
             {t("complaintRegistered")}
           </p>
 
-          <div className="bg-gray-100 rounded-xl p-4 mt-6">
-            <p className="text-sm text-gray-500">
+          <div className="mt-6 rounded-3xl border border-slate-200 bg-slate-50 p-5">
+            <p className="text-sm font-medium text-slate-500">
               {t("referenceId")}
             </p>
-
-            <h2 className="text-xl font-bold text-blue-600 mt-2">
+            <h2 className="mt-2 text-xl font-semibold tracking-[0.2em] text-sky-700">
               {referenceId}
             </h2>
           </div>
 
-          <div className="text-left mt-6 space-y-3">
-            <p>
-              <strong>{t("selectedCategory")}:</strong>{" "}
-              {category}
-            </p>
-
-            <p>
-              <strong>{t("describeIssue")}:</strong>{" "}
-              {description}
-            </p>
-
-            {imageName && (
+          <div className="mt-6 rounded-3xl border border-slate-200 bg-white p-5 text-left">
+            <div className="space-y-3 text-sm text-slate-600">
               <p>
-                <strong>{t("uploadPhoto")}:</strong>{" "}
-                {imageName}
+                <span className="font-semibold text-slate-800">{t("selectedCategory")}:</span>{" "}
+                {category}
               </p>
-            )}
+              <p>
+                <span className="font-semibold text-slate-800">{t("describeIssue")}:</span>{" "}
+                {description}
+              </p>
+              {imageName && (
+                <p>
+                  <span className="font-semibold text-slate-800">{t("uploadPhoto")}:</span>{" "}
+                  {imageName}
+                </p>
+              )}
+            </div>
           </div>
 
           <button
+            type="button"
             onClick={() => navigate("/")}
-            className="w-full mt-8 bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-xl"
+            className="mt-8 w-full rounded-2xl bg-sky-600 px-4 py-4 text-sm font-semibold text-white shadow-sm transition hover:bg-sky-700"
           >
             {t("reportAnother")}
           </button>

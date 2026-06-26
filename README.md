@@ -1,75 +1,112 @@
-# React + TypeScript + Vite
+# Civic Issue Reporting PWA
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + TypeScript + Tailwind progressive web app for reporting civic issues such as road damage, water supply concerns, garbage collection problems, street lighting issues, and public safety reports. The application is designed to be simple, multilingual, and mobile-friendly so citizens can report problems quickly from a phone or desktop browser.
 
-Currently, two official plugins are available:
+## Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This project was built as a take-home assignment to demonstrate a complete frontend flow for civic issue reporting. It focuses on:
 
-## React Compiler
+- A clear three-step reporting experience
+- Multilingual support for English and Marathi
+- A polished mobile-first UI
+- Progressive web app behavior for installation and offline readiness
+- A simple local submission flow with a generated reference ID
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Multilingual interface with English and Marathi support
+- Category-based issue selection
+- Detailed issue description form
+- Optional voice input for faster reporting
+- Optional image upload support
+- Confirmation screen with generated reference ID
+- Local persistence of submitted reports in browser storage
+- Progressive web app support
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS
+- React Router
+- React i18next
+- React Icons
+- Vite PWA Plugin
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Project Structure
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```text
+src/
+  components/       # Reusable UI components
+  i18n/             # Internationalization setup
+  locals/           # Translation files
+  pages/            # Route-level screens
+  types/            # Shared TypeScript types
+  utils/            # Helper utilities
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Setup Instructions
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Prerequisites
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Node.js 18+
+- npm or pnpm
 
+### Install dependencies
+
+```bash
+npm install
 ```
+
+### Run locally
+
+```bash
+npm run dev
+```
+
+Then open the local Vite URL in your browser.
+
+### Build for production
+
+```bash
+npm run build
+```
+
+### Preview production build
+
+```bash
+npm run preview
+```
+
+## Design Decisions
+
+- Mobile-first layout: the experience is optimized for small screens first, with responsive expansion for larger displays.
+- Simple step-based flow: users move through a guided reporting journey instead of facing a long form immediately.
+- Accessible interaction patterns: buttons, form controls, and language switching were designed to remain understandable and usable.
+- Minimal but polished UI: the design avoids unnecessary complexity while aiming for a modern and trustworthy civic experience.
+- Progressive enhancement: core functionality works without relying on advanced browser features, while optional enhancements such as voice input are added when available.
+
+## Future Improvements
+
+The current version is intentionally focused on the core reporting flow. Potential next steps include:
+
+- Backend integration for persistent issue submission
+- Real user authentication and role-based access
+- Validation feedback with inline error states
+- Improved file handling and image preview
+- Better analytics and reporting dashboards
+- More robust offline handling and caching strategies
+
+## Known Limitations
+
+- Voice input depends on browser support for speech recognition APIs.
+- Image uploads are handled locally in the current UI flow and are not yet sent to a backend service.
+- Submitted reports are stored in browser local storage for demo purposes.
+- The app currently focuses on the frontend experience rather than full civic operations workflows.
+
+## AI Usage Log
+
+- 2026-06-26 — Refined the UI to improve clarity, spacing, typography, and overall polish for interview readiness.
+- 2026-06-26 — Helped structure the multilingual flow and improve component consistency.
+- 2026-06-26 — Drafted this README to present the project in a professional, submission-ready format.
